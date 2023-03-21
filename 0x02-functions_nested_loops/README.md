@@ -1,6 +1,6 @@
 Working on functions and nested loops.
 
-0-putchar.c - program that prints _putchar, followed by a new line.
+**0-putchar.c** - program that prints _putchar, followed by a new line.
 
 1-alphabet.c - It prints the alphabet in lowercase followed by a newline.
 
