@@ -13,13 +13,13 @@
 int _isdigit(int c)
 {
 	int isNum = 0;
-    for (int i = 48; i < 58; i++) 
-    {
-        if (i == c)
-        {
-            isNum = 1;
-            break;
-        }
-    }
-    return (isNum);
+	for (int i = 48; i < 58; i++) 
+	{
+		if (i == c)
+		{
+			isNum = 1;
+            		break;
+        	}
+    	}
+    	return (isNum);
 }
