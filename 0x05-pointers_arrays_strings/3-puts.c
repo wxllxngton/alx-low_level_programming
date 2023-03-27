@@ -12,12 +12,11 @@
 void _puts(char *str)
 {
 	int n = 0;
-  int counter = 0;
-  while (str[counter] != '\0') 
-  {
-    /* Since letters no use of + '0' */
-    _putchar(str[counter]);
-    counter++;
-  }
+
+	while (str[n] != '\0')
+	{
+		_putchar(str[n]);
+		n++;
+	}
 	_putchar('\n');
 }
