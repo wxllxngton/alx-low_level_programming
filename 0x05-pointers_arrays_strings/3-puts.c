@@ -15,7 +15,7 @@ void _puts(char *str)
   int counter = 0;
   while (str[counter] != '\0') 
   {
-    // Since letters no use of + '0'
+    /* Since letters no use of + '0' */
     _putchar(str[counter]);
     counter++;
   }
