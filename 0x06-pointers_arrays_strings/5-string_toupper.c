@@ -9,22 +9,16 @@
  * Return: uppercase letters/strings
  */
 
-char *string_toupper(char *str1)
+char *string_toupper(char *s)
 {
-    char ch;
-    int counter;
-    
-    while (str1[counter] != '\0') 
-    {
-        for(ch ='a'; ch <= 'z'; ch++)
-        {
-           if (ch == str1[counter]) 
-           {
-               /* Conversion from lowercase to uppercase ASCII */
-               str1[counter] -= 32;
-           } 
-        }
-        counter++;
-    }
-    return (str1);
+	char *st = s;
+
+	while (*s)
+	{
+		if (*s >= 'a' && *s <= 'z')
+			*s -= 32;
+		s++;
+	}
+
+	return (st);
 }
