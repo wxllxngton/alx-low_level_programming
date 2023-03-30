@@ -10,28 +10,29 @@
 
 char *rot13(char *s)
 {
-	int i = 0, j;
+	int counter = 0;
 
-	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char rot[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-
-	while (s[i])
+	while (s[counter] != '\0')
 	{
-		j = 0;
-
-		while (j < 53)
+	    char a = 'a';
+	    while (a <= 'z')
+	    {
+		if (s[counter] == a || s[counter] == a - 32)
 		{
-			if (s[i] == alpha[j] || s[i] - 32 == alpha[j])
-			{
-				s[i] = rot[j];
-			}
-
-			j++;
+		    if (s[counter] >= 'a' && s[counter] <= 'z')
+		    {
+			s[counter] = 'a' + (s[counter] - 'a' + 13) % 26;
+		    }
+		    else if (s[counter] >= 'A' && s[counter] <= 'Z')
+		    {
+			s[counter] = 'A' + (s[counter] - 'A' + 13) % 26;
+		    }
+		    break;
 		}
-
-		i++;
-
+		a++;
+	    }
+	    counter++;
 	}
+	return s;
 
-	return (s);
 }
