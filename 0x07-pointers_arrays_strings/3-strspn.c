@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * _strspn - function returns number of bytes in
+ * _strspn: function returns number of bytes in
  * initial segment of s
  *
  * @s: input string
  * @accept: input character(s)
  *
- * Return: number of bytes in segment
+ * Return: number of bytes in memory segment
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-  unsigned int n = 0;
-  const char *x = accept;
+  int x = 0;
+  char *y = accept;
   while (*s)
   {
       int i = 0;
@@ -28,9 +28,9 @@ unsigned int _strspn(char *s, char *accept)
           accept++;
       }
       s++;
-      accept = x;
+      accept = y;
       if (i == 0)
           break;
   }
-  return n;
+  return x;
 }
