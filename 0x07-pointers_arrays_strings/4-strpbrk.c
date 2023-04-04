@@ -13,7 +13,6 @@
 char *_strpbrk(char *s, char *accept)
 {
   char *x = accept;
-  /* printf("%s\n", x); */
 
   while (*s)
   {
@@ -25,7 +24,6 @@ char *_strpbrk(char *s, char *accept)
           }
           accept++;
       }
-      /* Return to accept to 'world' */
       accept = x;
       s++;
   }
