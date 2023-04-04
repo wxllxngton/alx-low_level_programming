@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - function files memory with constant byte
+ * _memset: files memory with constant byte
  *
  * @s: input string
  * @b: input character
@@ -12,12 +12,12 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-  int counter = 0;
-  while (counter < n) 
-  {
-      s[counter] = b; 
-      counter++;
-  }
+	char *x = s;
 
-  return (s);
+	while (n--)
+	{
+		*x++ = b;
+	}
+
+	return (s);
 }
