@@ -1,5 +1,5 @@
 #include "main.h"
-int _sqrt(int prev, int root);
+int _sqrt(int prev, int n);
 
 /**
  * _sqrt_recursion - function returns natural
@@ -22,16 +22,16 @@ int _sqrt_recursion(int n)
  * _sqrt - function finds square root
  *
  * @prev: previous val
- * @root: sqrt value
+ * @n: sqrt value
  *
- * Return: square root
+ * Return: square root of n
  */
 
-int _sqrt(int prev, int root)
+int _sqrt(int prev, int n)
 {
-	if (prev > root)
+	if (prev > n)
 		return (-1);
-	else if (prev * prev == root)
+	else if (prev * prev == n)
 		return (prev);
-	return (_sqrt(prev + 1, root));
+	return (_sqrt(prev + 1, n));
 }
