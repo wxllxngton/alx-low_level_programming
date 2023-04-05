@@ -24,6 +24,7 @@ int is_prime_number(int n)
 
 /**
  * is_div - function checks divisibility
+ *
  * @num: input int
  * @div: result of division
  *
