@@ -4,11 +4,11 @@ int _strlen_recursion(char *s);
 int palindrome(char *s, int n);
 
 /**
- * _strlen_recursion - function obtain string len
+ * _strlen_recursion - function gets length of string
  *
  * @s: input string
  *
- * Return: len of string
+ * Return: length of string
  */
 
 int _strlen_recursion(char *s)
@@ -37,7 +37,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * palindrome - function with a reversed string
+ * palindrome - function checks if reversed string is a palindrome
  *
  * @s: input string
  * @n: len of string s
