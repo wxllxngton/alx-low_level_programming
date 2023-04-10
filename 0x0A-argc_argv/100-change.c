@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
- * main - program prints minimum number of coins to make change
+ * main - program prints min no. of coins
+ * to make change
  *
  * @argc: argument counter
  * @argv: argument vector
@@ -12,52 +14,44 @@
 
 int main(int argc, char **argv)
 {
-    int amount, total_coins = 0;
+	int amt, coins = 0;
 
-    if (argc == 2)
-    {
-        amount = atoi(argv[1]);
-
-        if (amount < 0)
-        {
-            printf("%d\n", 0);
-            return 0;
-        }
-
-        /* Calculate the number of quarters needed */
-        if (amount >= 25)
-        {
-            total_coins += amount / 25;
-            amount %= 25;
-        }
-
-        /* Calculate the number of dimes needed */
-        if (amount >= 10)
-        {
-            total_coins += amount / 10;
-            amount %= 10;
-        }
-
-        /* Calculate the number of nickels needed */
-        if (amount >= 5)
-        {
-            total_coins += amount / 5;
-            amount %= 5;
-        }
-
-        /* Calculate the number of pennies needed */
-        if (amount >= 1)
-        {
-            total_coins += amount / 1;
-            amount %= 1;
-        }
-
-        printf("%d\n", total_coins);
-        return 0;
-    }
-    else
-    {
-        printf("Error\n");
-        return 1;
-    }
+	if (argc == 2)
+	{
+		amt = atoi(argv[1]);
+		if (amt < 0)
+		{
+			printf("%d\n", 0);
+			return (0);
+		}
+		if (amt % 25 >= 0)
+		{
+			coins += amt / 25;
+			amt = amt % 25;
+		}
+		if (amt % 10 >= 0)
+		{
+			coins += amt / 10;
+			amt = amt % 10;
+		}
+		if (amt % 5 >= 0)
+		{
+			coins += amt / 5;
+			amt = amt % 5;
+		}
+		if (amt % 2 >= 0)
+		{
+			coins += amt / 2;
+			amt = amt % 2;
+		}
+		if (amt % 1 >= 0)
+			coins += amt;
+		printf("%d\n", coins);
+		return (0);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
 }
