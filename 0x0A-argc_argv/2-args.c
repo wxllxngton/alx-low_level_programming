@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - function prints all arguments passed
+ * main - function prints all arguments it receives.
  *
- * @argc: no. of arguments passed
+ * @argc: length of arguments array
  * @argv: argument vector
  *
  * Return: 0
