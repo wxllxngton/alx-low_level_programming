@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-/**main - program prints min no. of coins
- * to make change
+/**
+ * main - program prints min no. of coins to make change
  * 
  * @argc: argument counter
  * @argv: argument vector
