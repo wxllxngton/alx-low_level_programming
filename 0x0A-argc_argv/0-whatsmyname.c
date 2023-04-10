@@ -2,8 +2,10 @@
 
 /**
  * main - Entry point
+ 
  * @argc: length of argument
  * @argv: argument printing program name
+ 
  * Return: 0
  */
 
