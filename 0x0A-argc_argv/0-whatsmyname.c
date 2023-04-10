@@ -2,10 +2,10 @@
 
 /**
  * main - Entry point
- 
+ *
  * @argc: length of arguments array
  * @argv: argument vector containing program arguments
- 
+ *
  * Return: 0
  */
 
