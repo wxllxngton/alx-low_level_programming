@@ -6,7 +6,7 @@
  * main - program that adds positive numbers.
  *
  * @argc: argument counter
- * @argv: argument vector 
+ * @argv: argument vector
  *
  * Return: 0
  */
