@@ -3,9 +3,11 @@
 #include <ctype.h>
 
 /**
- * main - program adds two values
+ * main - program that adds positive numbers.
+ *
  * @argc: argument counter
- * @argv: argument vector containing values
+ * @argv: argument vector 
+ *
  * Return: 0
  */
 
