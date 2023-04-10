@@ -5,7 +5,7 @@
  * main - program multiplies 2 numbers
  *
  * @argc: argument counter
- * @argv: argument vector 
+ * @argv: argument vector
  *
  * Return: 0
  */
