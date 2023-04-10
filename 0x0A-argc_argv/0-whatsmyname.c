@@ -4,7 +4,7 @@
  * main - Entry point
  
  * @argc: length of arguments array
- * @argv[0]: argument containing program name
+ * @argv: argument vector containing program arguments
  
  * Return: 0
  */
