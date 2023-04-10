@@ -2,56 +2,54 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-/**
- * main - program prints min no. of coins
+/**main - program prints min no. of coins
  * to make change
- *
+ * 
  * @argc: argument counter
  * @argv: argument vector
- *
+ * 
  * Return: 1 if number of args pass, 0 otherwise
  */
-
+ 
 int main(int argc, char **argv)
 {
-	int amt, coins = 0;
-
-	if (argc == 2)
-	{
-		amt = atoi(argv[1]);
-		if (amt < 0)
-		{
-			printf("%d\n", 0);
-			return (0);
-		}
-		if (amt % 25 >= 0)
-		{
-			coins += amt / 25;
-			amt = amt % 25;
-		}
-		if (amt % 10 >= 0)
-		{
-			coins += amt / 10;
-			amt = amt % 10;
-		}
-		if (amt % 5 >= 0)
-		{
-			coins += amt / 5;
-			amt = amt % 5;
-		}
-		if (amt % 2 >= 0)
-		{
-			coins += amt / 2;
-			amt = amt % 2;
-		}
-		if (amt % 1 >= 0)
-			coins += amt;
-		printf("%d\n", coins);
-		return (0);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+    int amount, num_coins = 0;
+    if (argc == 2)
+    {
+    	amount = atoi(argv[1]);
+    	if (amount < 0)
+    	{
+    		printf("%d\n", 0);
+    		return (0);
+    	}
+    	if (amount % 25 >= 0)
+    	{
+    		num_coins += amount / 25;
+    		amount = amount % 25;
+    	}
+    	if (amount % 10 >= 0)
+    	{
+    		num_coins += amount / 10;
+    		amount = amount % 10;
+    	}
+    	if (amount % 5 >= 0)
+    	{
+    		num_coins += amount / 5;
+    		amount = amount % 5;
+    	}
+    	if (amount % 2 >= 0)
+    	{
+    		num_coins += amount / 2;
+    		amount = amount % 2;
+    	}
+    	if (amount % 1 >= 0)
+    		num_coins += amount;
+    	printf("%d\n", num_coins);
+    	return (0);
+    }
+    else
+    {
+    	printf("Error\n");
+    	return (1);
+    }
 }
