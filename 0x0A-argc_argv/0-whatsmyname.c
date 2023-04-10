@@ -3,8 +3,8 @@
 /**
  * main - Entry point
  
- * @argc: length of argument
- * @argv: argument printing program name
+ * @argc: length of arguments array
+ * @argv[0]: argument containing program name
  
  * Return: 0
  */
