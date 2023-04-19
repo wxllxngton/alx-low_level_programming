@@ -4,12 +4,8 @@
 
 /**
  * print_name - prints a given name
- * 
- * @name: parameter of name
- * 
+ * @name: input string of name
  * @f: function used to print
- * 
- * Return: none
  */
 
 void print_name(char *name, void (*f)(char *))
