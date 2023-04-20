@@ -8,16 +8,16 @@
  *
  * @format: a list of type of args passed
  *
- * Return: Nothing
+ * Return: nothing
  */
 
 void print_all(const char * const format, ...)
 {
-	va_list argsp;
+	va_list ap;
 	char *tmp;
 	int i = 0;
 
-	va_start(argsp, format);
+	va_start(ap, format);
 	while (format == NULL)
 	{
 		printf("\n");
@@ -28,16 +28,16 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", (char) va_arg(argsp, int));
+				printf("%c", (char) va_arg(ap, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(argsp, int));
+				printf("%d", va_arg(ap, int));
 				break;
 			case 'f':
-				printf("%f", (float) va_arg(argsp, double));
+				printf("%f", (float) va_arg(ap, double));
 				break;
 			case 's':
-				tmp = va_arg(argsp, char*);
+				tmp = va_arg(ap, char*);
 				if (tmp != NULL)
 				{
 					printf("%s", tmp);
@@ -51,6 +51,6 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		i++;
 	}
-	va_end(argsp);
+	va_end(ap);
 	printf("\n");
 }
