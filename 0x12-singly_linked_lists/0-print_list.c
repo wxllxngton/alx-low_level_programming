@@ -8,7 +8,7 @@
  * Return: number of present nodes in the list
  */
 
-size_t print_list(const list_t *h) 
+size_t print_list(const list_t *h)
 {
     	unsigned int nodesNo = 0;
 
