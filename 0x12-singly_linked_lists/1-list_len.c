@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - function that prints all the elements of a list_t list.
+ * list_len - function that returns the number of elements in a list_t list.
  *
  * @h: pointer to head of linked list
  *
@@ -10,12 +10,13 @@
 
 size_t list_len(const list_t *h)
 {
-    unsigned int nodesNo = 0;
+    size_t node_count = 0;
 
     while (h)
     {
-        nodesNo++;
+        node_count++;
         h = h->next;
     }
-    return (nodesNo);
+
+    return (node_count);
 }
