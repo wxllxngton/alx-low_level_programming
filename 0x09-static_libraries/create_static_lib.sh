@@ -1,2 +1,10 @@
 #!/bin/bash
-gcc -Wall -pedantic -Werror -Wextra -c *.c && ar rc liball.a *.o
+
+# Compile all .c files into .o files
+gcc -c *.c
+
+# Create the static library from the .o files
+ar rcs liball.a *.o
+
+# Clean up the .o files
+rm *.o
