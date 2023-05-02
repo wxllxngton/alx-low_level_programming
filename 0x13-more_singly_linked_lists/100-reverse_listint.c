@@ -2,9 +2,9 @@
 
 /**
  * reverse_listint - function that reverses a listint_t linked list.
- * 
+ *
  * @head: double pointer to the first node
- * 
+ *
  * Returns: a pointer to the first node of the reversed list
  */
 

@@ -8,13 +8,13 @@
  * Return: content at the specified index
  */
 
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index) 
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
     unsigned int counter = 0;
-    
+
     if (head == NULL)
         return (NULL);
-        
+
     while (head)
     {
         if (counter == index)
@@ -22,6 +22,6 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
         head = head->next;
         counter++;
     }
-    
+
     return (NULL);
 }

@@ -8,18 +8,18 @@
  * Return: content of the popped node
  */
 
-int pop_listint(listint_t **head) 
+int pop_listint(listint_t **head)
 {
     listint_t *temp;
     int content;
-    
+
     if (*head == NULL)
         return (0);
-        
+
     temp = *head;
     content = temp->n;
     *head = (*head)->next;
     free(temp);
-    
+
     return (content);
 }
