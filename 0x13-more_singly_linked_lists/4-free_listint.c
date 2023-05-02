@@ -3,11 +3,10 @@
 /**
  * free_listint - function that frees a listint_t list.
  *
- * @head: pointer to the head
+ * @head: pointer to the first node in the list
  *
  * Return: Nothing
  */
-
 
 void free_listint(listint_t *head)
 {
@@ -17,9 +16,6 @@ void free_listint(listint_t *head)
     {
         temp = head;
         head = head->next;
-        free(temp->n);
         free(temp);
     }
 }
-
-
