@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "operations.h"
 
 /**
  * add - Adds two numbers and returns their result.
