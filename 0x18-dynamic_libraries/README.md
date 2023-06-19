@@ -14,7 +14,7 @@ gcc -shared -o libdynamic.so *.o
 This way you must have your library created. To verify that you did it and have the right functions as dynamic symbols you can use:
 
 ```
-nm -D libdynamic.so.so
+nm -D libdynamic.so
 ```
 
 Great! at this point, you have your Dynamic Library created!
