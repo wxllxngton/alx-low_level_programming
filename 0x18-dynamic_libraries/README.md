@@ -32,4 +32,4 @@ Then, you can compile it by typing the following:
 gcc -L . 0-main.c -l all -o example
 ```
 
-Note that the name we gave to the library in this example was ‘all’. Here we use the `-L` option to tell the program where to find the library, in this case . that refers to the current directory. The `-l` option is to tell the compiler to look for the library.
+Note that the name we gave to the library in this example was `all`. Here we use the `-L` option to tell the program where to find the library, in this case . that refers to the current directory. The `-l` option is to tell the compiler to look for the library.
