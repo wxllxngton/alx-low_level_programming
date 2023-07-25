@@ -56,14 +56,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
     {
         if (strcmp(current_node->key, key) == 0)
         {
-            free(current_node->value); // Free existing value
-            current_node->value = strdup(value); // Duplicate and update value
-            return (1); // Update successful
+            free(current_node->value); /* Free existing value */
+            current_node->value = strdup(value); /* Duplicate and update value */
+            return (1); /* Update successful */
         }
         current_node = current_node->snext;
     }
 
-    // Key not found, create a new node and add it to the sorted list
+    /* Key not found, create a new node and add it to the sorted list */
     new_node = malloc(sizeof(shash_node_t));
     if (!new_node)
         return (0);
@@ -83,7 +83,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
     ht->array[index] = new_node;
 
-    return (1); // Successfully added new key-value pair
+    return (1); /* Successfully added new key-value pair */
 }
 
 /**
