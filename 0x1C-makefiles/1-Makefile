@@ -1,0 +1,5 @@
+# Build school executable with variables
+CC = gcc
+SRC = main.c school.c
+all: $(SRC)
+	$(CC) $(SRC) -o holberton
