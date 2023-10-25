@@ -1,0 +1,42 @@
+# Makefile for building the "school" executable
+
+# Variables
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+HEADER = m.h
+
+# Default target: build the executable
+all: $(NAME)
+
+# Build the executable
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+
+# Clean rule to delete Emacs, Vim, and executable files
+clean:
+	$(RM) *~ $(NAME)
+
+# Oclean rule to delete object files
+oclean:
+	$(RM) $(OBJ)
+
+# Fclean rule to delete Emacs, Vim, executable, and object files
+fclean: clean oclean
+
+# Re rule to force recompilation of source files
+re: oclean all
+
+# Pattern rule to compile .c files into .o files
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+# Phony targets
+.PHONY: all clean oclean fclean re
+
+# Ensure the m.h header file exists
+$(OBJ): $(HEADER)
+
