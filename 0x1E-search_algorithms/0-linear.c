@@ -9,13 +9,13 @@
  * @value: Value whose index is to be searched.
  * 
  * Return:
- *  - Index of the searched value.
- *  - If value is not present in array or if array is NULL, returns -1.
+ *  - (Index of the searched value)
+ *  - (If value is not present in array or if array is NULL, returns -1)
  */
 int linear_search(int *array, size_t size, int value) 
 {
     if (array == NULL)
-        return -1;
+        return (-1);
 
     for (size_t index = 0; index < size; index++) 
     {
@@ -24,5 +24,5 @@ int linear_search(int *array, size_t size, int value)
             return (int)index;
     }
 
-    return -1;
+    return (-1);
 }
