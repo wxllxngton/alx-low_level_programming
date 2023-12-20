@@ -3,11 +3,11 @@
 /**
  * binary_search - Searches for a value in a sorted array of integers using
  * the Binary search algorithm.
- * 
+ *
  * @array: Pointer to an array.
  * @size: Length of the array.
  * @value: Value whose index is to be searched.
- * 
+ *
  * Return:
  *  - (Index of the searched value)
  *  - (If value is not present in array or if array is NULL, returns -1)
@@ -20,7 +20,7 @@ int binary_search(int *array, size_t size, int value)
 	size_t left = 0;
 	size_t right = size - 1;
 
-	while (left <= right) 
+	while (left <= right)
 	{
 		size_t middle = (left + right) / 2;
 
