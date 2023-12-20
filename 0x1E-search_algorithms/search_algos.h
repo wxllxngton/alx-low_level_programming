@@ -31,7 +31,7 @@ typedef struct listint_s
  * @express: Pointer to the next node in the express lane
  *
  * Description: singly linked list node structure with an express lane
- * for Holberton project
+ * for ALX project
  */
 typedef struct skiplist_s
 {
