@@ -14,20 +14,20 @@
  */
 int exponential_search(int *array, size_t size, int value) 
 {
-    size_t index = 1;
-    int result;
+	size_t index = 1;
+	int result;
 
-    while (index < size && array[index] <= value) 
-    {
-        printf("Value checked array[%d] = [%d]\n", (int)index, array[index]);
-        index *= 2;
-    }
+	while (index < size && array[index] <= value) 
+	{
+		printf("Value checked array[%d] = [%d]\n", (int)index, array[index]);
+		index *= 2;
+	}
 
-    printf("Value found between indexes [%d] and [%d]\n", (int)(index / 2), (int)(index - 1));
+	printf("Value found between indexes [%d] and [%d]\n", (int)(index / 2), (int)(index - 1));
 
-    result = binary_search(array + (index / 2), 
+	result = binary_search(array + (index / 2), 
                             ((index / 2) > size) ? size : (index / 2), 
                             value);
 
-    return (result == -1 ? result : result + (int)(index / 2));
+	return (result == -1 ? result : result + (int)(index / 2));
 }
