@@ -1,16 +1,17 @@
 #include "search_algos.h"
 
 /**
- * interpolation_search - Searches for a value in a sorted array of integers using
- * the Interpolation search algorithm.
- * 
+ * interpolation_search - Searches for a value in a sorted array 
+ * of integers using the Interpolation search algorithm.
+ *
  * @array: Pointer to an array.
  * @size: Length of the array.
  * @value: Value to search for.
- * 
+ *
  * Return:
  *  - (First index where the value is located)
- *  - (If the value is not present in the array or if the array is NULL, returns -1)
+ *  - (If the value is not present in the array or 
+ *  = if the array is NULL, returns -1)
  */
 int interpolation_search(int *array, size_t size, int value) 
 {
@@ -21,7 +22,7 @@ int interpolation_search(int *array, size_t size, int value)
 
 	low = 0;
 	high = size - 1;
-
+	
 	while (low <= high) 
 	{
 		pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
